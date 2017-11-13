@@ -29,5 +29,5 @@
     "start": "node server/index.js",
     "start-dev":"react-scripts start"
   },
-  "proxy": "http://localhost:8080/"
+  "proxy": "https://iiinightlifeiii.herokuapp.com/"
 }
