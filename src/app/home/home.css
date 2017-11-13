@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+.body{
+  margin:0;
+  padding:0;
+  height:100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1
+}
+.background{
+  height:100%;
+  background-image: url(https://cdnb.artstation.com/p/assets/images/images/002/337/165/medium/mikhail-sharov-27-1080-2.jpg?1460458373);
+  background-attachment:fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.interface{
+  height:100%;
+  width:100%;
+}
+.overlay{
+  width:100%;
+  height:100%;
+  background:rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+}
+.box{
+  width:60%;
+  margin: auto;
+  text-align: center;
+  color:#FFF;
+  display: flex;
+  flex-direction: column;
+}
+.heading h1{
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 60px;
+  color:rgb(214, 116, 80);
+  font-weight: 600;
+  text-shadow: -2px -1px 2px rgb(250, 214, 181);
+  margin-bottom: 20px;
+}
+.icons{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+}
+.icon{
+  margin:auto;
+  width:20%;
+  height:100px
+}
+.icon img{
+  width:90px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 20px;
+}
+.search{
+  margin-top:20px;
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+
+}
+.visible{
+  position: fixed;
+  top:0;
+  width:60%
+}
+.search input{
+  width:70%;
+  outline: none;
+  background:rgba(2, 11, 93, 0.2);
+  color:rgb(217, 107, 60);
+  font-size: 20px;
+  border:1px solid rgb(208, 90, 4);
+  border-radius: 20px;
+  padding:5px;
+}
+.search input:focus{
+  background:rgba(2, 11, 93, 0.6);
+  padding:5px 20px;
+}
+.search input::-webkit-input-placeholder{
+  color:rgb(217, 107, 60);
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+.login{
+  opacity: .8;
+  width:20%;
+  height:40px;
+  background:#3F5B99;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+
+
+}
+.fLogin{
+  opacity: 0.8;
+  width:20%;
+  height:40px;
+  font-size: 30px;
+  background:#3F5B99;
+  border-radius: 20px;
+
+}
+.login p{
+  margin:auto;text-align: center;
+  font-size: 18px;
+  padding:0;
+  font-weight: bold;
+}
+.login img{
+  width:30%;
+  height:auto;
+}
+/*
+girl icon
+https://s-media-cache-ak0.pinimg.com/originals/a9/0f/d0/a90fd056334f59ce8e7cc5593e6d4d14.png
+*/
+
+/*  background-image: url(https://cdnb.artstation.com/p/assets/images/images/002/337/165/medium/mikhail-sharov-27-1080-2.jpg?1460458373);
+*/
+/*content css*/
+
+.background1{
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  background-image: url(http://www.ibackgroundwallpaper.com/wp-content/uploads/2014/04/dodge-challenger-srt-hd-wallpaper-001.jpg);
+  height:110%;
+}
+.background2{
+  background-image: url(https://az616578.vo.msecnd.net/files/responsive/cover/main/desktop/2016/10/02/636110236894691868312510666_winninginthe-mans-world.jpg);
+  height:150%;
+}
+.background3{
+  background-image: url(https://images6.alphacoders.com/373/373654.jpg);
+  height:150%
+}
+.background4{
+  background-image: url(https://img.wonderhowto.com/img/98/50/63579041923510/0/wallpapers.1280x600.jpg);
+  background-position: top;
+  height: 60%;
+}
+.content{
+  width: 100%;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+.itemContainer{
+  margin-top:25px;
+}
+.itemBox{
+  margin: auto;
+  margin-top: 30px;
+  width:90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-radius: 40px;
+  box-shadow: 6px 6px 10px rgba(13, 13, 13, 0.7);
+}
+.image{
+  margin:auto;
+  width: 25%;
+
+
+}
+.image img{
+  margin:auto;
+  width:100%;
+  max-height: 160px;
+  border-radius: 20px;
+  border: 3px solid rgb(180, 163, 152);
+}
+.name{
+  width:40%;
+  margin:auto;
+}
+.name h2{
+  color:rgb(214, 116, 80);
+  font-size: 32px;
+  font-weight: bolder;
+  font-family: 'Roboto Slab', serif;
+  text-shadow: 1px 1px 1px rgb(247, 190, 142);
+}
+.name .address{
+  bottom: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color:rgb(223, 151, 124);
+  margin-top: 30px;
+}
+.rating{
+  font-size: 16px;
+  color:rgb(224, 146, 108);
+  display: flex;
+  flex-direction: row;
+}
+.rating p{
+  margin-left: 10px;
+  font-weight: bolder;
+}
+.checked{
+  color: rgb(228, 68, 0);
+}
+.info{
+  width: 30%;
+  margin-right: 0;
+}
+.going{
+  text-align: center;
+  margin: 20px 10px;
+  width:150px;
+  font-size: 20px;
+  color:rgb(233, 150, 82);
+  font-weight: bold;
+  float:right;
+  padding:5px;
+  border-radius: 10px;
+  border:1px solid rgb(228, 68, 0);
+  background: rgba(24, 65, 157, 0.53);
+}
+.open{
+  margin:auto;
+  margin-right: 20px;
+  margin-top:90px;
+  height: 50%;
+  width:50px;
+  padding:2px;
+}
+.open img{
+  background:rgb(208, 124, 71);
+  border-radius: 2px;
+  width:100%;
+  height:auto;
+
+}
+.footer{
+  margin:auto;
+  width:70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer h1{
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 60px;
+  text-align: center;
+  color:rgb(214, 116, 80);
+  font-weight: 600;
+  text-shadow: -2px -1px 2px rgb(250, 214, 181);
+  margin-bottom: 20px;
+}
+.footer img{
+  margin:auto;
+  width:30%;
+}
+.contact{
+  font-size: 18px;
+  color: rgb(219, 219, 219);
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  width:auto;
+  justify-content: flex-start;
+  margin-left: 0;
+}
+.footer h2{
+  color:rgb(173, 173, 173);
+  font-size: 28px;
+  text-shadow: -2px -1px 2px rgb(106, 106, 106);
+}
+@media screen and (max-width: 720px){
+  .box{
+    width:90%;
+  }
+  .heading h1{
+    font-size: 50px;
+  }
+  .icon img{
+    width:70px;
+    height:70px;
+    border-radius: 10px;
+  }
+  .login img{
+    width:70%;
+  }
+  .xs-hide{
+    display: none
+  }
+  .visible{
+    width: 90%;
+    margin:auto;
+    top:20px;
+  }
+  .itemBox{
+    flex-direction: column;
+    margin:auto;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+  .itemBox .image{
+    width:80%;
+  }
+  .itemBox .name{
+    margin:auto;
+    width: 90%;
+  }
+  .itemBox .info{
+    width:90%;
+  }
+  .info{
+    display: flex;
+    flex-direction: row;
+  }
+  .going{
+    width: auto;
+  }
+  .open{margin: auto;}
+  .footer img{
+    width:70%;
+  }
+}
