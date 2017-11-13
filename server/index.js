@@ -6,7 +6,7 @@ const app =express();
 
 
 app.set('port', (process.env.PORT || 8080));
-var mlab = "mongodb://<dbuser>:<dbpassword>@ds261755.mlab.com:61755/night_life"
+var mlab = "mongodb://nightlife:password@ds261755.mlab.com:61755/night_life"
 var options={
   user: "nightlife",
   pass: "password"
