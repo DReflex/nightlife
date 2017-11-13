@@ -92,7 +92,12 @@ componentWillUnmount() {
     console.log("sumbiting");
     this.props.dispatch(resetPlace());
     var url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=coffie+bars+in+${this.props.scroll.query}&key=AIzaSyAyBlS9Dg0LbOHV8ykJXiI6Qgv3ZDL1zsw`
-    fetch(url)
+    fetch(url, {
+      mode:'cors',
+      headers:{
+        'Access-Control-Allow-Origin':'*'
+      },
+    })
     .then(res=> res.json()).then((data) => {
       data.results.map((result) => {
         var open;
