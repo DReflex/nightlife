@@ -64,7 +64,8 @@ componentWillUnmount() {
         image: "http://www.bsmc.net.au/wp-content/uploads/No-image-available.jpg"
       }))
     }else{
-      fetch(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${code}&key=AIzaSyAyBlS9Dg0LbOHV8ykJXiI6Qgv3ZDL1zsw`)
+
+      fetch(`https://safe-brushlands-32516.herokuapp.com/https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${code}&key=AIzaSyAqZPb8afQqq-8f5Aok2H8pMw36nocxdgY`)
       .then(res => this.props.dispatch(addPhoto({
         id,
         image: res.url
@@ -91,13 +92,8 @@ componentWillUnmount() {
     // put data in redux and put image to redux hopefully
     console.log("sumbiting");
     this.props.dispatch(resetPlace());
-    var url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=coffie+bars+in+${this.props.scroll.query}&key=AIzaSyAyBlS9Dg0LbOHV8ykJXiI6Qgv3ZDL1zsw`
-    fetch(url, {
-      mode:'cors',
-      headers:{
-        'Access-Control-Allow-Origin':'*'
-      },
-    })
+    var url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=coffie+bars+in+${this.props.scroll.query}&key=AIzaSyAqZPb8afQqq-8f5Aok2H8pMw36nocxdgY`
+    fetch(`https://safe-brushlands-32516.herokuapp.com/${url}`)
     .then(res=> res.json()).then((data) => {
       data.results.map((result) => {
         var open;

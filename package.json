@@ -1,5 +1,5 @@
 {
-  "name": "voting_app",
+  "name": "nightlife_app",
   "version": "0.1.0",
   "private": true,
     "dependencies": {
@@ -28,5 +28,6 @@
     "postinstall": "npm run build",
     "start": "node server/index.js",
     "start-dev":"react-scripts start"
-  }
+  },
+  "proxy":"http://localhost:8080/"
 }
