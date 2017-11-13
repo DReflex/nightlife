@@ -2,9 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
-const cors = require('cors');
 const app =express();
-app.use(cors())
+
 
 app.set('port', (process.env.PORT || 8080));
 var mlab = "mongodb://<dbuser>:<dbpassword>@ds261755.mlab.com:61755/night_life"

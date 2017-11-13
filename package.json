@@ -28,6 +28,5 @@
     "postinstall": "npm run build",
     "start": "node server/index.js",
     "start-dev":"react-scripts start"
-  },
-  "proxy": "https://iiinightlifeiii.herokuapp.com/"
+  }
 }
