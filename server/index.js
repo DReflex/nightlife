@@ -2,8 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
-
+const cors = require('cors');
 const app =express();
+app.use(cors())
+
 app.set('port', (process.env.PORT || 8080));
 var mlab = "mongodb://<dbuser>:<dbpassword>@ds261755.mlab.com:61755/night_life"
 var options={
@@ -16,13 +18,7 @@ var promise = mongoose.connect(mlab,{
 });
 
 mongoose.Promise = global.Promise;
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", '*');
-    res.header("Access-Control-Allow-Credentials", true);
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
-    next();
-});
+
 
 app.use(bodyParser.json());
 
