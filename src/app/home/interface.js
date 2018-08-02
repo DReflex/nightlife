@@ -64,16 +64,13 @@ componentWillUnmount() {
         image: "http://www.bsmc.net.au/wp-content/uploads/No-image-available.jpg"
       }))
     }else{
-      var myHeaders = new Headers({
-        'Access-Control-Allow-Origin':'http://localhost:8080',
-        "Access-Control-Allow-Credentials": true,
-        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
-        'Access-Control-Allow-Methods': 'POST, GET, PATCH, DELETE, OPTIONS'
-      });
-      fetch(`https://safe-brushlands-32516.herokuapp.com/https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${code}&key=AIzaSyAqZPb8afQqq-8f5Aok2H8pMw36nocxdgY`,{
-        headers:myHeaders,
-        mode:'cors'
-      })
+      // var myHeaders = new Headers({
+      //   'Access-Control-Allow-Origin':'http://localhost:8080',
+      //   "Access-Control-Allow-Credentials": true,
+      //   'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+      //   'Access-Control-Allow-Methods': 'POST, GET, PATCH, DELETE, OPTIONS'
+      // });
+      fetch(`https://safe-brushlands-32516.herokuapp.com/https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${code}&key=AIzaSyAqZPb8afQqq-8f5Aok2H8pMw36nocxdgY`)
       .then((res) => {
         var image = res.url.split('https://safe-brushlands-32516.herokuapp.com/')
         this.props.dispatch(addPhoto({

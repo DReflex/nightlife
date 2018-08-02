@@ -5,7 +5,7 @@ const path = require('path');
 const app =express();
 
 
-app.set('port', (process.env.PORT || 8080));
+app.set('port', (process.env.PORT || 4000));
 var mlab = "mongodb://nightlife:password@ds261755.mlab.com:61755/night_life"
 var options={
   user: "nightlife",
@@ -20,12 +20,12 @@ mongoose.Promise = global.Promise;
 
 
 app.use(bodyParser.json());
-app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PATCH, DELETE, OPTIONS');
-    next();
-});
+// app.use(function (req, res, next) {
+//     res.setHeader('Access-Control-Allow-Origin', '*');
+//     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+//     res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PATCH, DELETE, OPTIONS');
+//     next();
+// });
 app.use('/api', require('./routes/api'));
 
 //init app

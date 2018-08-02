@@ -12,7 +12,6 @@ class Login extends React.Component {
     if(res.status === 404){
       fetch('/api/user', {
                 method: 'POST',
-                mode: 'CORS',
                 body: JSON.stringify({
                   name: user._profile.firstName,
                   id: user._profile.id,
@@ -30,7 +29,6 @@ class Login extends React.Component {
   .then(() => {
       fetch(`/api/user/${user._profile.id}`, {
                 method: 'PUT',
-                mode: 'CORS',
                 body: JSON.stringify({
                   accessToken: user._token.accessToken,
                   expiresAt:user._token.expiresAt

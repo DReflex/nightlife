@@ -113,7 +113,6 @@ class Content extends React.Component {
       if(res.status === 404){
         fetch(`/api/place`,{
           method: 'POST',
-          mode: 'CORS',
           body: JSON.stringify({
             name: place.name,
             id: place.id,
@@ -131,7 +130,6 @@ class Content extends React.Component {
             going_place.push(place.id)
             fetch(`/api/user/${user.id}`,{
               method: 'PUT',
-              mode: 'CORS',
               body: JSON.stringify({
                 going_to:going_place
               }),
@@ -157,7 +155,6 @@ class Content extends React.Component {
             console.log("!=length");
             fetch(`/api/place/${place.id}`,{
               method: 'PUT',
-              mode: 'CORS',
               body: JSON.stringify({
                 value: value,
                 who:newWho
@@ -175,7 +172,6 @@ class Content extends React.Component {
             //put it to server
             fetch(`/api/place/${place.id}`,{
               method: 'PUT',
-              mode: 'CORS',
               body: JSON.stringify({
                 value: value,
                 who:who
